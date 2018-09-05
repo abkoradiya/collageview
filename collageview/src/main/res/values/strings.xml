@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CollageView</string>
+    <string name="more_images_plus" formatted="false">+ %d</string>
+</resources>
