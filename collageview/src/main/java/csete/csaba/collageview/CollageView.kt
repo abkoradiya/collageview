@@ -2,6 +2,7 @@ package csete.csaba.collageview
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -75,6 +76,7 @@ class CollageView : FrameLayout {
     }
 
     private fun positionViews() {
+        Log.d("PositioningViews", "" + collageViewItems.count())
         when (collageViewItems.count()) {
             1 -> {
                 positionBigImage()
@@ -89,12 +91,14 @@ class CollageView : FrameLayout {
     }
 
     private fun positionBigImage() {
+        Log.d("PositioningViews", "positionBigImage")
         val bigWidth = viewWidth - (2 * margin)
         val bigHeight = viewHeight - (2 * margin)
         positionView(image1, bigWidth, bigHeight, margin, margin, 0, 0)
     }
 
     private fun positionTwoImages() {
+        Log.d("PositioningViews", "positionTwoImages")
         val width = (viewWidth - (3 * margin)) / 2
         val height = viewHeight - (2 * margin)
         positionView(image1, width, height, margin, margin, 0, 0)
@@ -102,6 +106,7 @@ class CollageView : FrameLayout {
     }
 
     private fun positionAllViews(includeText: Boolean) {
+        Log.d("PositioningViews", "positionAllViews: $includeText")
         val smallSide = (viewHeight - (3 * margin)) / 2
         val bigWidth = viewWidth - (3 * margin) - smallSide
         val bigHeight = viewHeight - (2 * margin)
@@ -124,7 +129,7 @@ class CollageView : FrameLayout {
         layoutParams.setMargins(marginLeft, marginTop, marginRight, marginBottom)
     }
 
-    data class CollageViewItem(
+    private data class CollageViewItem(
             val imageView: ImageView,
             val imageUri: String
     )
