@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <ImageView
         android:id="@+id/image1"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -11,7 +11,7 @@
         android:focusable="true"
         android:foreground="?selectableItemBackground" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <ImageView
         android:id="@+id/image2"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -19,7 +19,7 @@
         android:focusable="true"
         android:foreground="?selectableItemBackground" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <ImageView
         android:id="@+id/image3"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -27,7 +27,7 @@
         android:focusable="true"
         android:foreground="?selectableItemBackground" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <TextView
         android:id="@+id/moreImagesText"
         android:layout_width="0dp"
         android:layout_height="0dp"

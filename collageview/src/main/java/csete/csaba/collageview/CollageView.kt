@@ -4,8 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
+import android.widget.ImageView
+import android.widget.TextView
+
 
 class CollageView : FrameLayout {
 
@@ -13,10 +14,10 @@ class CollageView : FrameLayout {
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
-    private var image1: AppCompatImageView
-    private var image2: AppCompatImageView
-    private var image3: AppCompatImageView
-    private var moreImagesText: AppCompatTextView
+    private var image1: ImageView
+    private var image2: ImageView
+    private var image3: ImageView
+    private var moreImagesText: TextView
 
     private var viewWidth: Int = 0
     private var viewHeight: Int = 0
@@ -124,7 +125,7 @@ class CollageView : FrameLayout {
     }
 
     data class CollageViewItem(
-            val imageView: AppCompatImageView,
+            val imageView: ImageView,
             val imageUri: String
     )
 
@@ -133,7 +134,7 @@ class CollageView : FrameLayout {
         /**
          * Load image into view with your favorite image loader.
          */
-        fun onImagePlaced(imageView: AppCompatImageView, imageUri: String)
+        fun onImagePlaced(imageView: ImageView, imageUri: String)
 
         fun onImageClicked(position: Int)
     }

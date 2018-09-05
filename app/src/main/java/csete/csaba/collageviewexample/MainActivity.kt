@@ -1,15 +1,15 @@
 package csete.csaba.collageviewexample
 
+import android.app.Activity
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatImageView
+import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import csete.csaba.collageview.CollageView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), CollageView.OnImagePlaced {
+class MainActivity : Activity(), CollageView.OnImagePlaced {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), CollageView.OnImagePlaced {
         imageCount5.setImageUrls(listOf(uri5, uri4, uri3, uri2, uri1))
     }
 
-    override fun onImagePlaced(imageView: AppCompatImageView, imageUri: String) {
+    override fun onImagePlaced(imageView: ImageView, imageUri: String) {
         Glide.with(this)
                 .load(imageUri)
                 .apply(RequestOptions.centerCropTransform())
